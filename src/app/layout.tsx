@@ -26,12 +26,57 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ConvexClientProvider>
-          {children}
-          <Toaster />
-          </ConvexClientProvider>
-        </ThemeProvider>
+           <ConvexClientProvider>
+           {children}
+           <Toaster />
+           </ConvexClientProvider>
+         </ThemeProvider>
       </body>
     </html>
   );
 }
+
+
+// import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+// import './globals.css';
+
+// export default function RootLayout({
+//   children,
+// }: {
+//   children: React.ReactNode
+// }) {
+//   return (
+//     // <ClerkProvider>
+//     <ConvexClientProvider>
+//       <html lang="en">
+//         <body>
+//         <ThemeProvider
+//           attribute="class"
+//           defaultTheme="system"
+//           enableSystem
+//           disableTransitionOnChange
+//         >
+//           {/* <ConvexClientProvider> */}
+//             <main>
+//            {children}
+//            </main>
+//           <Toaster />
+//            {/* </ConvexClientProvider> */}
+//          </ThemeProvider>
+//           <header>
+//             <SignedOut>
+//               <SignInButton />
+//             </SignedOut>
+//             <SignedIn>
+//               <UserButton />
+//             </SignedIn>
+//           </header>
+//           {/* <main>
+//             {children}
+//           </main> */}
+//         </body>
+//       </html>
+//     {/* // </ClerkProvider> */}
+//     </ConvexClientProvider>
+//   )
+// }
